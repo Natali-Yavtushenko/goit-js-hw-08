@@ -85,10 +85,10 @@ function createMarkup(arr) {
     })
     .join(" ");
 }
-container.insertAdjacentHTML(`beforeend`, createMarkup);
+container.insertAdjacentHTML(`beforeend`, createMarkup(images));
 
-function handleClick(item) {
-  item.preventDefault();
+function handleClick(event) {
+  event.preventDefault();
   if (event.target.nodeName !== `IMG`) {
     return;
   }
